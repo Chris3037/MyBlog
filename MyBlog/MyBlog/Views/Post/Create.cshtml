@@ -1,0 +1,81 @@
+﻿@model MyBlog.Models.Post
+
+@{
+    ViewBag.Title = "Create new post";
+}
+
+<h2>Create a new post</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false)
+
+    <fieldset>
+        <legend>Post</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PostTitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PostTitle)
+            @Html.ValidationMessageFor(model => model.PostTitle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PostedOn)
+        </div>
+        <div class="editor-field">
+            @Html.TextBox("PostedOn", DateTime.Now)
+            @Html.ValidationMessageFor(model => model.PostedOn)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PostAuthor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PostAuthor)
+            @Html.ValidationMessageFor(model => model.PostAuthor)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PostPic)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PostPic)
+            @Html.ValidationMessageFor(model => model.PostPic)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PostBody)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.PostBody, 15, 100, new object { })
+            @Html.ValidationMessageFor(model => model.PostBody)
+        </div>
+        
+        @Html.Hidden("PostRespect", 0)
+        @Html.Hidden("PostViews", 0)
+
+        <!-- THIS IS A COMMENTS IN HTML-->
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PostTags)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PostTags)
+            @Html.ValidationMessageFor(model => model.PostTags)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MyBlog.Models.Post>
+
+@{
+    ViewBag.Title = "My Blog";
+}
+
+<h2>Blog Post</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Author
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Respect
+        </th>
+        <th>
+            Body
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @item.PostTitle
+        </td>
+        <td >
+            @item.PostAuthor
+        </td>
+        <td>
+            @item.PostedOn
+        </td>
+        <td>
+            @item.PostRespect
+        </td>
+        <td>
+            @if (item.PostBody.Length >= 200)
+            {
+                <small>@item.PostBody.Substring(0, 200)...</small>
+            }
+            else
+            {
+                <small>@item.PostBody</small>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PostID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PostID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PostID })
+        </td>
+    </tr>
+}
+
+</table>

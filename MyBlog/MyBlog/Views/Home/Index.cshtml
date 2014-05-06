@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MyBlog.Models.Post>
+
+@{
+    ViewBag.Title = "My Blog";
+}
+
+
+@foreach (var post in Model)
+{
+    <section>
+        <h1><a href="@Url.Action("Details", "post", new { id=post.PostID })">@post.PostTitle</a></h1>
+        <small>
+            By @post.PostAuthor,
+            @post.PostedOn.ToLongDateString() <br /> <br />
+        </small>
+        @if (!string.IsNullOrEmpty(post.PostPic))
+        {
+            <div>
+                <img src="@post.PostPic" height="200"/>
+            </div>
+        }
+        <div>
+            @post.PostBody
+        </div>
+        <div>
+            <br />
+			<a href = "" ><button>-1</button>
+            <small>Respect: @post.PostRespect</small>
+			<button>+1</button>
+        </div>
+    </section>
+    
+}
