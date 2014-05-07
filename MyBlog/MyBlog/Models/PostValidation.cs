@@ -31,8 +31,9 @@ namespace MyBlog.Models
         [Required(ErrorMessage="Text body is required")
         , Display(Name="Body")]
         public string PostBody;
-
-        [Display(Name="Tags (Optional)")]
+        
+        [Required(ErrorMessage = "Please provide at least one tag")
+        , Display(Name="Tags")]
         public string PostTags;
     }
 }

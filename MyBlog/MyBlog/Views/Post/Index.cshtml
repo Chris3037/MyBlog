@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "My Blog";
+    Layout = "~/Views/Shared/_layoutDashboard.cshtml";
 }
 
 <h2>Blog Post</h2>
@@ -62,3 +63,6 @@
 }
 
 </table>
+
+<br />
+<h2 class="sideTab"><a href="@Url.Action("index", "home")">To Main Page</a></h2>

@@ -4,11 +4,14 @@
     ViewBag.Title = "My Blog";
 }
 
+@*<a href="http://Google.com">
+    <div class="circleDiv" id="myCircle">To Google!</div>
+</a>*@
 
 @foreach (var post in Model)
 {
     <section>
-        <h1><a href="@Url.Action("Details", "post", new { id=post.PostID })">@post.PostTitle</a></h1>
+        <h1 = class="postTitle"><a href="@Url.Action("Details", "post", new { id=post.PostID })">@post.PostTitle</a></h1>
         <small>
             By @post.PostAuthor,
             @post.PostedOn.ToLongDateString() <br /> <br />
@@ -24,9 +27,11 @@
         </div>
         <div>
             <br />
-			<a href = "" ><button>-1</button>
+			<a href =""><button>-1</button></a>
             <small>Respect: @post.PostRespect</small>
-			<button>+1</button>
+			<a href =""><button>+1</button></a>
+            <br />
+            <br />
         </div>
     </section>
     

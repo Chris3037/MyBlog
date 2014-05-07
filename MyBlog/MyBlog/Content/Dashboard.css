@@ -62,39 +62,15 @@ textarea {
     display: none;
 }
 
+
 * {
+    text-decoration:none;
+    text-decoration-color: black;
     font-family: Verdana;
 }
 
-*:link, *:visited {
-    text-decoration:none;
-    color:black;
-}
-* a:hover {
-    text-decoration:underline;
-}
-
-#sideBar a:link {
-    text-decoration:none;
-    color:white;
-}
-#sideBar a:hover {
-    text-decoration:underline;
-    color:grey;
-}
-#sideBar a:visited {
-    color:white;
-}
-
-
-h1 {
-    font-family:'Arial Black', Gadget, sans-serif;
-    font-size:1.7em;
-}
-
 #header {
-    position:fixed;
-    z-index: 1;
+    position:relative;
     background-color:#3b3b3b;
     height:8%;
     width:100%;
@@ -103,72 +79,8 @@ h1 {
     font-size:4em;
     font-family:'Arial Black', Gadget, sans-serif;
 }
-    
-#notHeader {
-    height:64px;
-    width:100%; 
-}
 
-#footer {
-    position: relative;
-    background-color:#3b3b3b;
-    height:50px;
-    width:100%;
-    text-align:center;
-    color:white;
-    clear:both;
-}
-
-section {
-    margin:0 0 0 9%;
-}
-
-#sideBar {
-    position: fixed;
-    width: 8%;
-    height: 100%;
-    background-color: #232323;
-    font-size: 20px;
-    font-family:'Arial Narrow', 'Nimbus Sans L', sans-serif;
-    text-decoration: none;
-    text-decoration-color: #ffffff;
-    padding: 3% 0 0 0;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    text-decoration-color: #ffffff;
-}
-
-
-.sideTab {
-    text-decoration: none;
-    text-decoration-color: #ffffff;
-}
-
-.postTitle {
-    text-decoration: none;
-    text-decoration-color: black;
-}
-
-#myCircle {
-    position: relative;
-    float: right;
-    display:inline-block;
-    width:200px;
-    height:200px;
-    background-color:red;
-    border:1px solid black;
-    text-align:center;
+h1 {
     font-size:25px;
-    font-family:'Arial Black', Gadget, sans-serif 'Arial Black', Gadget, sans-serif;
-    color:black; text-decoration-color:black;
-    border-radius:100%;
-    line-height:200px;
-    margin:5% 5% 0 0;
-}
-
-#email {
-    margin:-2% 2% 0 0;
-    font-size:20px;
-    float:right;
+    font-family:'Arial Black', Gadget, sans-serif;
 }

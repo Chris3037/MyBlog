@@ -4,16 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
+    <link href="~/Content/Site.css" rel="stylesheet" />
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-	    <div id="header">
-            <h1 style="text-align:center; color:hotpink">Chris Corey's Test Blog</h1>
-	    </div>
+    <header id="header">
+        <h2>Chris Corey's Test Blog</h2>
+        <h2 id="email"><a href="https://mail.google.com/mail/u/0/#inbox?compose=145d8dcfbdfa823a">Chris.Corey95@gmail.com</a></h2>
+    </header>
+    <header id="notHeader">
+    </header>
+    <div id="sideBar">
+        <br />
+        <h2 class="sideTab"><a href="@Url.Action("index", "Post")">To <br /> Dashboard</a></h2>
+    </div>
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>
+    <footer id="footer">
+        Created by Chris Corey
+        <br />
+        (512) 497-5480
+    </footer>
 </html>
