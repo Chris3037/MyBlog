@@ -21,5 +21,44 @@ namespace MyBlog.Controllers
             return View(list);
         }
 
+        public ActionResult RespectDown(int id)
+        {
+            //Gets the post from the database
+            var post = db.Posts.Where(x => x.PostID == id).First();
+            //Increments the respects
+            post.PostRespect -= 1;
+            //Save changes to the database
+            db.SaveChanges();
+            //Return to index
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult RespectUp(int id)
+        {
+            //Gets the post from the database
+            var post = db.Posts.Where(x => x.PostID == id).First();
+            //Increments the respects
+            post.PostRespect += 1;
+            //Save changes to the database
+            db.SaveChanges();
+            //Return to index
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult AddComment(int id, FormCollection values)
+        {
+            //Making a new comment
+            var comment = new Models.Comment();
+            comment.PostID = id;
+            comment.CommentAuthor = values["author"];
+            comment.CommentBody = values["body"];
+            comment.CommetedOn = DateTime.Now;
+            comment.CommentRespect = 0;
+            //Add the comment to the database
+            db.Comments.Add(comment);
+            db.SaveChanges();
+            //Return to index
+            return RedirectToAction("Index");
+        }
     }
 }

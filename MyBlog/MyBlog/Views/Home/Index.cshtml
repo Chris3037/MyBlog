@@ -10,7 +10,7 @@
 
 @foreach (var post in Model)
 {
-    <section>
+    <section id="section"; style="margin-right:5%">
         <h1 = class="postTitle"><a href="@Url.Action("Details", "post", new { id=post.PostID })">@post.PostTitle</a></h1>
         <small>
             By @post.PostAuthor,
@@ -27,11 +27,43 @@
         </div>
         <div>
             <br />
-			<a href =""><button>-1</button></a>
+			<a href ="@Url.Action("RespectDown", "Home", new {id = post.PostID})">
+                <button>-1</button>
+			</a>
             <small>Respect: @post.PostRespect</small>
-			<a href =""><button>+1</button></a>
+			<a href ="@Url.Action("RespectUp", "Home", new {id = post.PostID})">
+                <button>+1</button>
+			</a>
             <br />
             <br />
+        </div>
+
+        <div class="comments">
+
+            @foreach (var comment in post.Comments)
+            {
+                <div>
+                    @comment.CommentAuthor posted on @comment.CommetedOn
+                    <br />
+                    @comment.CommentBody
+                    <br />
+                    <br /
+                </div>
+            }
+
+            @using (Html.BeginForm("AddComment", "Home", new { id = post.PostID }))
+            {
+                <label for="author">Author</label>
+                <br />
+                <input type="text" name="author" />
+                <br />
+                <label for="body">Comment</label>
+                <br />
+                <textarea name="body"></textarea>
+                <br />
+                <input type="submit" value="Add Comment" />
+            }
+        <br />
         </div>
     </section>
     

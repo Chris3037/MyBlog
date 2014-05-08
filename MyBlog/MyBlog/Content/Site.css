@@ -70,26 +70,13 @@ textarea {
     text-decoration:none;
     color:black;
 }
+
 * a:hover {
     text-decoration:underline;
 }
 
-#sideBar a:link {
-    text-decoration:none;
-    color:white;
-}
-#sideBar a:hover {
-    text-decoration:underline;
-    color:grey;
-}
-#sideBar a:visited {
-    color:white;
-}
+.section {
 
-
-h1 {
-    font-family:'Arial Black', Gadget, sans-serif;
-    font-size:1.7em;
 }
 
 #header {
@@ -101,7 +88,7 @@ h1 {
     text-align:center;
     color:white;
     font-size:4em;
-    font-family:'Arial Black', Gadget, sans-serif;
+    font-weight: bold;
 }
     
 #notHeader {
@@ -123,7 +110,14 @@ section {
     margin:0 0 0 9%;
 }
 
+#notSideBar {
+    position: fixed;
+    width: 8%;
+    height: 100%;
+}
+
 #sideBar {
+    z-index: 2;
     position: fixed;
     width: 8%;
     height: 100%;
@@ -132,7 +126,6 @@ section {
     font-family:'Arial Narrow', 'Nimbus Sans L', sans-serif;
     text-decoration: none;
     text-decoration-color: #ffffff;
-    padding: 3% 0 0 0;
     text-align: center;
     color: white;
     text-decoration: none;
@@ -141,11 +134,27 @@ section {
 
 
 .sideTab {
+    margin:0 5% 0 0;
+    font-size:20px;
+    float:right;
+    height:60px;
+    width:110px;
+    background-color:blue;
+    border:1px solid black;
+    border-radius:20px;
+    line-height:25px;
+    color:white;    
     text-decoration: none;
     text-decoration-color: #ffffff;
 }
 
+.sideTab:hover {
+    text-decoration: underline;
+}
+
 .postTitle {
+    font-family:'Arial Black', Gadget, sans-serif;
+    font-size:1.7em;
     text-decoration: none;
     text-decoration-color: black;
 }
@@ -161,14 +170,22 @@ section {
     text-align:center;
     font-size:25px;
     font-family:'Arial Black', Gadget, sans-serif 'Arial Black', Gadget, sans-serif;
-    color:black; text-decoration-color:black;
+    color:black;
+    text-decoration-color:black;
     border-radius:100%;
     line-height:200px;
     margin:5% 5% 0 0;
 }
 
 #email {
-    margin:-2% 2% 0 0;
+    margin:-2.5% 2% 0 0;
     font-size:20px;
     float:right;
+    height:30px;
+    width:300px;
+    color:white;
+    background-color:blue;
+    border:2px solid black;
+    border-radius:20px;
+    line-height:28px;
 }

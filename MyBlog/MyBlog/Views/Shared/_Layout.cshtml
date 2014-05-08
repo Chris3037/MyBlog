@@ -10,13 +10,15 @@
 <body>
     <header id="header">
         <h2>Chris Corey's Test Blog</h2>
-        <h2 id="email"><a href="https://mail.google.com/mail/u/0/#inbox?compose=145d8dcfbdfa823a">Chris.Corey95@gmail.com</a></h2>
+        <h2 id="email"><a href="https://mail.google.com/mail/u/0/#inbox?compose=145d8dcfbdfa823a"><div>Chris.Corey95@gmail.com</div></a></h2>
     </header>
     <header id="notHeader">
     </header>
     <div id="sideBar">
         <br />
-        <h2 class="sideTab"><a href="@Url.Action("index", "Post")">To <br /> Dashboard</a></h2>
+        <h2><a href="@Url.Action("index", "Post")"><div class="sideTab">To <br /> Dashboard</div></div></a></h2>
+    </div>
+    <div id="notSideBar">
     </div>
     @RenderBody()
 
@@ -24,8 +26,8 @@
     @RenderSection("scripts", required: false)
 </body>
     <footer id="footer">
-        Created by Chris Corey
+        <p>Created by Chris Corey</p>
         <br />
-        (512) 497-5480
+        <p>(512) 497-5480</p>
     </footer>
 </html>

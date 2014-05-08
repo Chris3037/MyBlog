@@ -8,12 +8,15 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div id="header">
+    <header id="header">
         <h1>Chris Corey's Test Blog Dashboard</h1>
-    </div>
+    </header>
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>
+
+<br />
+<h2 class="sideTab"><a href="@Url.Action("index", "home")">To Main Page</a></h2>
 </html>

@@ -5,7 +5,8 @@
     Layout = "~/Views/Shared/_layoutDashboard.cshtml";
 }
 
-<h2>Edit</h2>
+<h2 style="font-weight:bold; font-size:1.5em;">Edit</h2>
+<br />
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
@@ -22,6 +23,10 @@
         <div class="editor-field">
             @Html.EditorFor(model => model.PostTitle)
             @Html.ValidationMessageFor(model => model.PostTitle)
+        </div>
+
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.PostedOn)
         </div>
 
         <div class="editor-label">
