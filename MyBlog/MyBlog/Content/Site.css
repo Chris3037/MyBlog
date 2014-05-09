@@ -66,19 +66,6 @@ textarea {
     font-family: Verdana;
 }
 
-*:link, *:visited {
-    text-decoration:none;
-    color:white;
-}
-
-* a:hover {
-    text-decoration:underline;
-}
-
-.section {
-
-}
-
 #body {
     font-size:16px;
 }
@@ -87,7 +74,7 @@ textarea {
     position:fixed;
     z-index: 1;
     background-color:#3b3b3b;
-    height:8%;
+    height:65px;
     width:100%;
     text-align:center;
     color:white;
@@ -132,8 +119,11 @@ section {
 #sideBar {
     z-index: 2;
     position: fixed;
-    margin:-3px 0 0 0;
-    width: 8%;
+    left:-100px;
+    top:67px;
+    float:left;
+    clear:both;
+    width: 123px;
     height: 100%;
     background-color: #232323;
     font-size: 20px;
@@ -168,12 +158,24 @@ section {
     background-color:#485352;
 }
 
-.postTitle {
+#postTitle {
     color:black;
     font-family:'Arial Black', Gadget, sans-serif;
     font-size:1.7em;
     text-decoration: none;
-    text-decoration-color: black;
+}
+
+#postTitle:link{
+    color:black;
+    text-decoration: none;
+}
+#postTitle:visited{
+    color:black;
+    text-decoration: none;
+}
+#postTitle:hover{
+    color:black;
+    text-decoration: underline;
 }
 
 #myCircle {
@@ -200,6 +202,7 @@ section {
     float:right;
     height:30px;
     width:300px;
+    text-decoration: none;
     color:white;
     background-color:#1d3d40;
     border:2px solid black;
@@ -207,7 +210,17 @@ section {
     line-height:28px;
 }
 
+#email:link {
+    text-decoration: none;
+    color:white;
+}
+
+#email:visited {
+    text-decoration: none;
+    color:white;
+}
 #email:hover {
     text-decoration: underline;
+    color:white;
     background-color:#485352;
 }

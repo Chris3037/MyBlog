@@ -11,7 +11,7 @@
 @foreach (var post in Model)
 {
     <section id="section">
-        <h1 = class="postTitle"><a href="@Url.Action("Details", "post", new { id=post.PostID })">@post.PostTitle</a></h1>
+        <h1 id="postTitle"><a href="@Url.Action("Details", "post", new { id=post.PostID })">@post.PostTitle</a></h1>
         <small>
             By @post.PostAuthor,
             @post.PostedOn.ToLongDateString() <br /> <br />
