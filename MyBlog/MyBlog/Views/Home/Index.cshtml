@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MyBlog.Models.Post>
+﻿    @model IEnumerable<MyBlog.Models.Post>
 
 @{
     ViewBag.Title = "My Blog";
@@ -10,7 +10,7 @@
 
 @foreach (var post in Model)
 {
-    <section id="section"; style="margin-right:5%">
+    <section id="section">
         <h1 = class="postTitle"><a href="@Url.Action("Details", "post", new { id=post.PostID })">@post.PostTitle</a></h1>
         <small>
             By @post.PostAuthor,
@@ -18,11 +18,11 @@
         </small>
         @if (!string.IsNullOrEmpty(post.PostPic))
         {
-            <div>
+            <div class="picture">
                 <img src="@post.PostPic" height="200"/>
             </div>
         }
-        <div>
+        <div id="body">
             @post.PostBody
         </div>
         <div>

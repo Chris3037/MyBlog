@@ -68,7 +68,7 @@ textarea {
 
 *:link, *:visited {
     text-decoration:none;
-    color:black;
+    color:white;
 }
 
 * a:hover {
@@ -77,6 +77,10 @@ textarea {
 
 .section {
 
+}
+
+#body {
+    font-size:16px;
 }
 
 #header {
@@ -89,14 +93,17 @@ textarea {
     color:white;
     font-size:4em;
     font-weight: bold;
+    border:2px solid black;
 }
     
 #notHeader {
     height:64px;
-    width:100%; 
+    width:100%;
+    border:2px solid white; 
 }
 
 #footer {
+    border:2px solid black;
     position: relative;
     background-color:#3b3b3b;
     height:50px;
@@ -106,19 +113,26 @@ textarea {
     clear:both;
 }
 
+.picture {
+    border:2px solid black;
+    display:inline-block;
+}
+
 section {
-    margin:0 0 0 9%;
+    margin:0 5% 0 9%;
 }
 
 #notSideBar {
     position: fixed;
     width: 8%;
     height: 100%;
+    border:2px solid white;
 }
 
 #sideBar {
     z-index: 2;
     position: fixed;
+    margin:-3px 0 0 0;
     width: 8%;
     height: 100%;
     background-color: #232323;
@@ -130,6 +144,7 @@ section {
     color: white;
     text-decoration: none;
     text-decoration-color: #ffffff;
+    border:2px solid black;
 }
 
 
@@ -139,7 +154,7 @@ section {
     float:right;
     height:60px;
     width:110px;
-    background-color:blue;
+    background-color:#1d3d40;
     border:1px solid black;
     border-radius:20px;
     line-height:25px;
@@ -150,9 +165,11 @@ section {
 
 .sideTab:hover {
     text-decoration: underline;
+    background-color:#485352;
 }
 
 .postTitle {
+    color:black;
     font-family:'Arial Black', Gadget, sans-serif;
     font-size:1.7em;
     text-decoration: none;
@@ -184,8 +201,13 @@ section {
     height:30px;
     width:300px;
     color:white;
-    background-color:blue;
+    background-color:#1d3d40;
     border:2px solid black;
     border-radius:20px;
     line-height:28px;
+}
+
+#email:hover {
+    text-decoration: underline;
+    background-color:#485352;
 }
